@@ -231,12 +231,6 @@ body {
   fill: transparent;
 }
 
-.checkbox:checked + .label-checkbox-text .modal-span {
-  border: none;
-  fill: #ffffff;
-  background-color: var(--accent);
-}
-
 .modal-span {
   width: 16px;
   height: 15px;
@@ -246,6 +240,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.checkbox:checked + .label-checkbox-text .modal-span {
+  border: none;
+  fill: #ffffff;
+  background-color: var(--accent);
 }
 
 .label-checkbox-link {

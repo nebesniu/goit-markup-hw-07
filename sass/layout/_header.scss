@@ -35,8 +35,10 @@
   display: flex;
 }
 
-.nav-item:not(:last-child) {
-  margin-right: 50px;
+.nav-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .nav-link {
@@ -65,8 +67,10 @@
   align-items: center;
 }
 
-.header-item + .header-item {
-  margin-left: 30px;
+.header-item {
+  & + .header-item {
+    margin-left: 30px;
+  }
 }
 
 .header-contacts {
