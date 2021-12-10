@@ -76,15 +76,16 @@
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    color: #ffffff;
+    background-color: var(--accent);
+  }
 }
 
 .social-item:nth-child(4n) {
   margin-right: 0;
-}
-.sociai-link-team:focus,
-.sociai-link-team:hover {
-  color: #ffffff;
-  background-color: var(--accent);
 }
 
 .social-links {

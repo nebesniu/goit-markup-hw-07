@@ -43,16 +43,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-form-btn:hover,
-.form-btn:hover,
-.footer-form-btn:focus,
-.form-btn:focus,
-.hero-btn:hover,
-.hero-btn:focus {
-  color: var(--first-text-color);
-  background-color: #188ce8;
-}
-
 .overlay {
   max-width: 1600px;
   min-height: 600px;
