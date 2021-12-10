@@ -32,10 +32,10 @@
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-.team-item:nth-child(4n) {
-  margin-right: 0;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 
 .team-after-title {
@@ -64,6 +64,10 @@
   width: 44px;
   height: 44px;
   margin-right: 10px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 .sociai-link-team {
   display: flex;
@@ -82,10 +86,6 @@
     color: #ffffff;
     background-color: var(--accent);
   }
-}
-
-.social-item:nth-child(4n) {
-  margin-right: 0;
 }
 
 .social-links {

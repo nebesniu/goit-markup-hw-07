@@ -109,10 +109,6 @@ body {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
-  transform: scale(0.5) rotate(180deg) translate(200px, 200px);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -126,6 +122,10 @@ body {
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
   transform: scale(1) translate(-50%, -50%) rotate(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(0.5) rotate(180deg) translate(200px, 200px);
 }
 
 .modal-btn {
@@ -145,6 +145,11 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-btn:focus .modal-svg,
+.modal-btn:hover .modal-svg {
+  fill: var(--accent);
+}
+
 .modal-title {
   font-weight: 700;
   font-size: 20px;
@@ -152,14 +157,6 @@ body {
   text-align: center;
   color: var(--second-title-color);
   margin-bottom: 12px;
-}
-
-.modal-input-text:focus-within .footer-modal-icon {
-  fill: var(--accent);
-}
-
-.modal-input-text:focus-within .modal-input {
-  border-color: var(--accent);
 }
 
 .footer-modal-icon {
@@ -178,6 +175,18 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input-text:focus-within .footer-modal-icon {
+  fill: var(--accent);
+}
+
+.modal-input-text:focus-within .modal-input {
+  border-color: var(--accent);
+}
+
+.modal-input-text:focus-within .modal-textarea {
+  border-color: var(--accent);
 }
 
 .modal-input {
@@ -199,10 +208,6 @@ body {
   border-radius: 4px;
   resize: none;
   outline: none;
-}
-
-.modal-input-text:focus-within .modal-textarea {
-  border-color: var(--accent);
 }
 
 .modal-textarea::placeholder {
@@ -254,11 +259,6 @@ body {
   padding: 10px 55px;
   letter-spacing: 0.06em;
   background-color: #2196f3;
-}
-
-.modal-btn:focus .modal-svg,
-.modal-btn:hover .modal-svg {
-  fill: var(--accent);
 }
 
 .header {
@@ -377,28 +377,6 @@ body {
   text-align: center;
 }
 
-.footer-form-btn,
-.form-btn,
-.hero-btn,
-.btn {
-  padding: 10px 32px;
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  color: var(--first-title-color);
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: transparent;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .overlay {
   max-width: 1600px;
   min-height: 600px;
@@ -424,6 +402,10 @@ body {
   margin-right: 30px;
 }
 
+.about-item:nth-child(4n) {
+  margin-right: 0;
+}
+
 .about-container {
   display: flex;
   justify-content: center;
@@ -436,10 +418,6 @@ body {
 .about-svg {
   width: 70px;
   height: 70px;
-}
-
-.about-item:nth-child(4n) {
-  margin-right: 0;
 }
 
 .about-after-title {
@@ -570,6 +548,10 @@ body {
   margin-right: 10px;
 }
 
+.social-item:nth-child(4n) {
+  margin-right: 0;
+}
+
 .sociai-link-team {
   display: flex;
   justify-content: center;
@@ -584,10 +566,6 @@ body {
 .sociai-link-team:focus, .sociai-link-team:hover {
   color: #ffffff;
   background-color: var(--accent);
-}
-
-.social-item:nth-child(4n) {
-  margin-right: 0;
 }
 
 .social-links {
@@ -666,6 +644,10 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.adr-link:hover, .adr-link:focus {
+  color: var(--accent);
+}
+
 a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26"] {
   color: var(--first-text-color);
 }
@@ -677,11 +659,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
 
 .adr-item:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.adr-link:hover,
-.adr-link:focus {
-  color: var(--accent);
 }
 
 .footer-container {
