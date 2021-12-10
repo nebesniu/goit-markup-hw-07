@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --first-title-color: #ffffff;
   --second-title-color: #212121;
@@ -6,11 +7,14 @@
   --bg-color: #e5e5e5;
   --first-text-color: #ffffff;
 }
-/* -=-------------------------сброс */
+
 p,
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -25,27 +29,14 @@ img {
   height: auto;
 }
 
-/* /-------------------------*общие стили  */
-
-.conteiner {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.list {
+  list-style: none;
 }
 
 .link {
   text-decoration: none;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.list {
-  list-style: none;
-}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -59,13 +50,104 @@ img {
   margin: -1px;
 }
 
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 body {
   color: var(--body-color);
   letter-spacing: 0.03em;
   font-family: 'Roboto', sans-serif;
 }
 
-/* ------------------header главная страница */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.btn {
+  padding: 10px 32px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: var(--first-title-color);
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-title {
+  width: 695px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--first-title-color);
+}
+
+.hero {
+  padding: 200px 0;
+  text-align: center;
+}
+
+.footer-form-btn,
+.form-btn,
+.hero-btn,
+.btn {
+  padding: 10px 32px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: var(--first-title-color);
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:hover,
+.form-btn:hover,
+.footer-form-btn:focus,
+.form-btn:focus,
+.hero-btn:hover,
+.hero-btn:focus {
+  color: var(--first-text-color);
+  background-color: #188ce8;
+}
+
+.overlay {
+  max-width: 1600px;
+  min-height: 600px;
+  margin: 0 auto;
+  background-color: #2f303a;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/fon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .header {
   background-color: var(--first-title-color);
   border-bottom: 1px solid #ececec;
@@ -89,7 +171,6 @@ body {
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent);
-
   padding-top: 24px;
   padding-bottom: 24px;
   margin-right: 93px;
@@ -112,16 +193,16 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--second-title-color);
   padding-top: 32px;
   padding-bottom: 32px;
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .current {
   color: var(--accent);
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent);
@@ -140,6 +221,7 @@ body {
 .header-contacts:hover {
   color: var(--accent);
 }
+
 .header-contacts {
   display: flex;
   align-items: center;
@@ -147,9 +229,7 @@ body {
   font-size: 14px;
   line-height: 1.14x;
   letter-spacing: 0.02em;
-
   color: var(--body-color);
-
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -168,75 +248,6 @@ body {
   fill: currentColor;
 }
 
-/* -----------------hero------------------- */
-.hero-title {
-  width: 695px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--first-title-color);
-}
-
-.hero {
-  padding: 200px 0;
-  text-align: center;
-}
-
-.footer-form-btn,
-.form-btn,
-.hero-btn {
-  padding: 10px 32px;
-
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-
-  color: var(--first-title-color);
-  background-color: #2196f3;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: transparent;
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-form-btn:hover,
-.form-btn:hover,
-.footer-form-btn:focus,
-.form-btn:focus,
-.hero-btn:hover,
-.hero-btn:focus {
-  color: var(--first-text-color);
-  background-color: #188ce8;
-}
-
-.overlay {
-  max-width: 1600px;
-  min-height: 600px;
-  margin: 0 auto;
-
-  background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/fon.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-/* ------------------about----------------
- */
 .about {
   padding-bottom: 0;
 }
@@ -271,23 +282,21 @@ body {
 
 .about-after-title {
   margin-bottom: 10px;
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--second-title-color);
 }
+
 .about-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-/* ------------------------work */
 
 .work-title {
   margin-bottom: 50px;
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -319,12 +328,10 @@ body {
 .work-text {
   position: absolute;
   z-index: 1;
-
   bottom: 27px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1, 14;
-
   color: #ffffff;
 }
 
@@ -334,8 +341,6 @@ body {
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
 }
-
-/* ----------------------team---------- */
 
 .team {
   background-color: #f5f4fa;
@@ -352,7 +357,6 @@ body {
 
 .team-title {
   margin-bottom: 50px;
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -379,7 +383,6 @@ body {
 
 .team-after-title {
   margin-bottom: 10px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -404,6 +407,7 @@ body {
   height: 44px;
   margin-right: 10px;
 }
+
 .sociai-link-team {
   display: flex;
   justify-content: center;
@@ -412,14 +416,13 @@ body {
   height: 100%;
   color: #afb1b8;
   border-radius: 50%;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item:nth-child(4n) {
   margin-right: 0;
 }
+
 .sociai-link-team:focus,
 .sociai-link-team:hover {
   color: #ffffff;
@@ -432,7 +435,6 @@ body {
   fill: currentColor;
 }
 
-/* ------------------------------клиенты */
 .clients-title {
   margin-bottom: 50px;
   font-weight: 700;
@@ -455,6 +457,7 @@ body {
 .clients-item:last-child {
   margin-right: 0;
 }
+
 .clients-link {
   display: flex;
   justify-content: center;
@@ -464,7 +467,6 @@ body {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 3%;
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -481,10 +483,118 @@ body {
   fill: currentColor;
 }
 
-/* ------------------------------footer */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects-item {
+  width: 370px;
+  height: 404px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.projects-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.projects-item:focus,
+.projects-item:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.btn-list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-item + .btn-item {
+  margin-left: 8px;
+}
+
+.buttons {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-title-color);
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 22px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttons:hover,
+.buttons:focus {
+  color: var(--first-text-color);
+  background-color: var(--accent);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 294px;
+  overflow: hidden;
+}
+
+.wrap-text {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  height: 100%;
+  line-height: 1.6;
+  font-size: 18px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-link:focus .wrap-text,
+.projects-link:hover .wrap-text {
+  transform: translateY(0);
+}
+
+.projects-after-title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--second-title-color);
+}
+
+.projects-text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.projects-box {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+
 .footer {
   background-color: #2f303a;
 }
+
 .brand {
   color: var(--first-text-color);
 }
@@ -495,19 +605,16 @@ body {
 
 .adr-link {
   display: block;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26"]
-{
+a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26"] {
   color: var(--first-text-color);
 }
 
@@ -533,6 +640,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   padding-top: 12px;
   margin-right: 93px;
 }
+
 .footer-title-form,
 .footer-text {
   margin-bottom: 20px;
@@ -564,9 +672,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   height: 100%;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
-
   border-radius: 50%;
-
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -574,6 +680,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
 .footer-social-link:focus {
   background-color: var(--accent);
 }
+
 .footer-link {
   width: 20px;
   height: 20px;
@@ -590,7 +697,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   margin-right: 8px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-
   color: rgba(255, 255, 255, 0.6);
   background-color: inherit;
   border-radius: 4px;
@@ -604,7 +710,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   display: flex;
   align-items: center;
   height: 50px;
-
   padding: 10px 29px;
 }
 
@@ -622,127 +727,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   width: 100%;
   padding-top: 12px;
 }
-/* -------------------портфолио ----------------------------*/
-
-/* ---------------------projects */
-
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.projects-item {
-  width: 370px;
-  height: 404px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.projects-item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.projects-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.projects-item:focus,
-.projects-item:hover {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.btn-list {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.btn-item + .btn-item {
-  margin-left: 8px;
-}
-
-.buttons {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--second-title-color);
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  cursor: pointer;
-
-  padding: 6px 22px;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.buttons:hover,
-.buttons:focus {
-  color: var(--first-text-color);
-  background-color: var(--accent);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 3px 1px rgba(0, 0, 0, 0.1);
-}
-
-.wrap {
-  position: relative;
-  width: 100%;
-  height: 294px;
-  overflow: hidden;
-}
-
-.wrap-text {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 63px 24px;
-
-  height: 100%;
-
-  line-height: 1.6;
-  font-size: 18px;
-  background-color: rgba(33, 150, 243, 0.9);
-  color: #ffffff;
-
-  transform: translateY(100%);
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.projects-link:focus .wrap-text,
-.projects-link:hover .wrap-text {
-  transform: translateY(0);
-}
-
-.projects-after-title {
-  margin-bottom: 4px;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--second-title-color);
-}
-
-.projects-text {
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: #757575;
-}
-
-.projects-box {
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
-  padding: 20px 24px;
-}
-/* ------------------------------footer */
 
 .footer-logo {
   font-family: Raleway;
@@ -751,7 +735,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent);
-
   display: block;
   margin-bottom: 20px;
 }
@@ -761,21 +744,15 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   padding-bottom: 60px;
 }
 
-/*----------------------------------   модальное окно */
-
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -794,15 +771,11 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-
   min-width: 528px;
   min-height: 581px;
   background-color: #ffffff;
-
   border-radius: 4px;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
-    0 1px 3px rgba(0, 0, 0, 0.12);
-
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
   transform: scale(1) translate(-50%, -50%) rotate(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -811,19 +784,16 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   position: absolute;
   top: 10px;
   right: 10px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   width: 30px;
   height: 30px;
-
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -848,7 +818,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   position: absolute;
   left: 11px;
   bottom: 12px;
-
   width: 18px;
   height: 18px;
 }
@@ -857,12 +826,10 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   display: block;
   position: relative;
   margin-bottom: 10px;
-
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input {
@@ -902,7 +869,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   align-items: center;
   margin: 20px 11px 30px;
   text-align: end;
-
   font-size: 14px;
   line-height: 1.71;
   cursor: pointer;
@@ -928,6 +894,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   justify-content: center;
   align-items: center;
 }
+
 .label-checkbox-link {
   text-decoration-skip-ink: none;
   color: var(--accent);
@@ -940,9 +907,9 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   letter-spacing: 0.06em;
   background-color: #2196f3;
 }
+
 .modal-btn:focus .modal-svg,
 .modal-btn:hover .modal-svg {
   fill: var(--accent);
 }
-
-/* - cubic-bezier(0.4, 0, 0.2, 1) */
+/*# sourceMappingURL=main.css.map */
