@@ -2,6 +2,7 @@
 
 @import './utils/variables';
 @import './utils/hidden';
+@import './utils/mixins';
 
 @import './components/conteiner';
 @import './components/body';
@@ -11,9 +12,9 @@
 @import './components/grid';
 @import './components/social-networks';
 @import './components/modal-window';
+@import './components/nav';
 
 @import './layout/header';
-@import './layout/nav';
 @import './layout/contacts';
 @import './layout/hero';
 @import './layout/about';
