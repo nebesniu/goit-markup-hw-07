@@ -106,6 +106,11 @@ body {
   margin-right: 93px;
 }
 
+.logo-footer {
+  margin: 0;
+  padding: 0;
+}
+
 .logo__text {
   color: #000000;
 }
@@ -126,6 +131,48 @@ body {
 
 .grid__item:nth-child(4n) {
   margin-right: 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.social__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #afb1b8;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__link:focus, .social__link:hover {
+  color: #ffffff;
+  background-color: var(--accent);
+}
+
+.social__link--white {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social__svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .backdrop {
@@ -164,7 +211,7 @@ body {
   transform: scale(0.5) rotate(180deg) translate(200px, 200px);
 }
 
-.modal-btn {
+.modal__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,12 +228,12 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn:focus .modal-svg,
-.modal-btn:hover .modal-svg {
+.modal__btn:focus .modal-svg,
+.modal__btn:hover .modal-svg {
   fill: var(--accent);
 }
 
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -195,15 +242,7 @@ body {
   margin-bottom: 12px;
 }
 
-.footer-modal-icon {
-  position: absolute;
-  left: 11px;
-  bottom: 12px;
-  width: 18px;
-  height: 18px;
-}
-
-.modal-input-text {
+.modal-form__label {
   display: block;
   position: relative;
   margin-bottom: 10px;
@@ -213,19 +252,27 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input-text:focus-within .footer-modal-icon {
+.modal-form__label:focus-within .modal-form__icon {
   fill: var(--accent);
 }
 
-.modal-input-text:focus-within .modal-input {
+.modal-form__label:focus-within .modal-form__input {
   border-color: var(--accent);
 }
 
-.modal-input-text:focus-within .modal-textarea {
+.modal-form__label:focus-within .modal-form__textarea {
   border-color: var(--accent);
 }
 
-.modal-input {
+.modal-form__icon {
+  position: absolute;
+  left: 11px;
+  bottom: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.modal-form__input {
   width: 100%;
   height: 40px;
   padding: 12px 42px;
@@ -235,7 +282,7 @@ body {
   margin-top: 4px;
 }
 
-.modal-textarea {
+.modal-form__textarea {
   width: 100%;
   height: 120px;
   margin-top: 4px;
@@ -246,7 +293,7 @@ body {
   outline: none;
 }
 
-.modal-textarea::placeholder {
+.modal-form__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
   line-height: 1.17;
@@ -264,10 +311,6 @@ body {
 }
 
 .modal-span {
-  fill: transparent;
-}
-
-.modal-span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,6 +319,7 @@ body {
   border: 2px solid #212121;
   margin-right: 5px;
   border-radius: 4px;
+  fill: transparent;
 }
 
 .checkbox:checked + .label-checkbox-text .modal-span {
@@ -289,7 +333,7 @@ body {
   color: var(--accent);
 }
 
-.form-btn {
+.form__btn {
   display: block;
   margin: 0 auto;
   padding: 10px 55px;
@@ -537,44 +581,7 @@ body {
   margin-bottom: 16px;
 }
 
-.team-list-icon {
-  display: flex;
-  justify-content: center;
-}
-
-.social-item {
-  width: 44px;
-  height: 44px;
-  margin-right: 10px;
-}
-
-.social-item:nth-child(4n) {
-  margin-right: 0;
-}
-
-.sociai-link-team {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: #afb1b8;
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.sociai-link-team:focus, .sociai-link-team:hover {
-  color: #ffffff;
-  background-color: var(--accent);
-}
-
-.social-links {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.clients-title {
+.clients__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -583,21 +590,21 @@ body {
   color: var(--second-title-color);
 }
 
-.clients-list {
+.clients__list {
   display: flex;
 }
 
-.clients-item {
+.clients__item {
   width: 170px;
   height: 92px;
   margin-right: 30px;
 }
 
-.clients-item:last-child {
+.clients__item:last-child {
   margin-right: 0;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -609,27 +616,43 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover, .clients-link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--accent);
   border: 1px solid #2196f3;
   border-radius: 3%;
 }
 
-.clients-svg {
+.clients__svg {
   width: 106px;
   height: 60px;
   fill: currentColor;
 }
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2f303a;
 }
 
-.adr {
-  margin-right: 70px;
+.footer-container {
+  display: flex;
 }
 
-.adr-link {
+.address {
+  margin-right: 70px;
+  margin-top: 20px;
+}
+
+.address__item {
+  display: block;
+  width: 230px;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
   display: block;
   font-family: Roboto;
   font-style: normal;
@@ -640,7 +663,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.adr-link:hover, .adr-link:focus {
+.address__link:hover, .address__link:focus {
   color: var(--accent);
 }
 
@@ -648,26 +671,13 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   color: var(--first-text-color);
 }
 
-.adr-item {
-  display: block;
-  width: 230px;
-}
-
-.adr-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer-container {
-  display: flex;
-}
-
 .footer-box {
   padding-top: 12px;
   margin-right: 93px;
 }
 
-.footer-title-form,
-.footer-text {
+.footer-form__title,
+.footer-box__text {
   margin-bottom: 20px;
   color: #ffffff;
   font-weight: 700;
@@ -675,47 +685,16 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   line-height: 1.14;
 }
 
-.footer-social-list {
-  display: flex;
-}
-
-.footer-social-item {
-  width: 44px;
-  height: 44px;
-  margin-right: 10px;
-}
-
-.footer-social-item:last-child {
-  margin-right: 0;
-}
-
-.footer-social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-form-box {
   width: 100%;
-  height: 100%;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 12px;
 }
 
-.footer-social-link:hover, .footer-social-link:focus {
-  background-color: var(--accent);
-}
-
-.footer-link {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.footer-title-form {
+.footer-form__title {
   display: block;
 }
 
-.footer-form-input {
+.footer-form__input {
   width: 358px;
   height: 50px;
   margin-right: 8px;
@@ -730,26 +709,21 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   display: flex;
 }
 
-.footer-form-btn {
+.footer-form__btn {
   display: flex;
   align-items: center;
   height: 50px;
   padding: 10px 29px;
 }
 
-.span {
+.footer-form__text {
   margin-right: 10px;
 }
 
-.icon-icon-send {
+.footer-form__icon {
   width: 24px;
   height: 24px;
   fill: #ffffff;
-}
-
-.footer-form-box {
-  width: 100%;
-  padding-top: 12px;
 }
 
 .projects-list {
@@ -856,21 +830,5 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   padding: 20px 24px;
-}
-
-.footer-logo {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 20px;
-}
-
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 /*# sourceMappingURL=main.css.map */
